@@ -1,7 +1,7 @@
-addi x10,x0,4
-addi x6,x0,40
 addi x1,x0,0
 addi x2,x0,1
+addi x10,x0,4
+addi x6,x0,40
 addi x3,x0,0
 addi x4,x3,4
 sw x1,0x100(x3)
@@ -22,3 +22,8 @@ addi x5,x5,4
 addi x9,x9,4
 jal x7,up
 end:
+beq x3,x6,break
+lw x16,0x100(x3)
+addi x3,x3,4
+jal x7,end
+break:

@@ -41,4 +41,19 @@ The provided code snippet is written in RISC-V assembly language and implements 
    - Load a value from memory at the same address into `x7`.
    - Check if the values in `x5` and `x7` are not equal. If they are not equal, branch back to the `LOOP` label.
 
-## 
+## Branch & Control Hazard
+The provided code snippet is written in RISC-V assembly language and implements a simple loop that performs certain arithmetic operations until a specific condition is met. Here's a brief overview of the code:
+
+1. Initialize `x5` to 0.
+2. Initialize `x7` to 1.
+3. Initialize `x6` to 10.
+4. Initialize `x28` to 0.
+5. Enter a loop labeled as `LOOP`.
+   - Check if the values in `x28` and `x6` are equal using the `beq` instruction.
+   - If the values are equal, exit the loop and continue execution.
+   - If the values are not equal, perform the following operations within the loop:
+     - Add the values in `x5` and `x7` and store the result in `x29`.
+     - Set `x5` to the value in `x7`.
+     - Set `x7` to the value in `x29`.
+     - Jump back to the `LOOP` label to repeat the loop.
+
